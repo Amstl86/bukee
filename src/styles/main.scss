@@ -6,18 +6,39 @@
 @import "base/general";
 @import "../blocks/modules";
 
+$fontmain: "Open Sans";
+$font-title: "Roboto Slab";
+$gr-color: #65e47d;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h2 {
+    font-family: "Roboto Slab";
+}
 body {
-    font-family: 'Roboto Slab', serif;
+    font-family: $fontmain, serif;
+    font-weight: normal;
 }
 header {
     background-image: url(../img/bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+    color: #fff;
+}
+.wrap {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
 }
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 53px;
+    margin-bottom: 153px;
     &__logo {
         display: block;
         width: 140px;
@@ -28,7 +49,56 @@ header {
         justify-content: flex-end;
         list-style: none;
         &__item {
-            margin-right: 15px;
+            margin-left: 20px;
+            padding-bottom: 8px;
+            &-active {
+                border-bottom: 3px solid $gr-color;
+            }
         }
+        & a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            letter-spacing: 0.8px;
+
+        }
+    }
+}
+.block-book {
+    display: flex;
+    justify-content: space-between;
+}
+.block-img {
+    margin-right: 54px;
+}
+.block-text {
+    &__name {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.9px;
+        margin-bottom: 39px;
+
+    }
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 44px;
+        text-transform: uppercase;
+        letter-spacing: 1.92px;
+        margin-bottom: 15px;
+    }
+    &__subtitle {
+        font-family: $font-title;
+        color: #65e496;
+        font-size: 18px;
+        line-height: 44px;
+        letter-spacing: 0.9px;
+        margin-bottom: 40px;
+    }
+    &__text {
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: 0.75px;
+        margin-bottom: 35px;
     }
 }
